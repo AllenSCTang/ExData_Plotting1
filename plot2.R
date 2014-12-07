@@ -11,6 +11,7 @@ plot2 <- function(...){
         table02$FullDate<-time01
         
         ##Generate Plot 2
+        Sys.setlocale("LC_TIME","C")
         png(filename="plot2.png",width=480,height=480)
         plot(y=table02[,3],x=table02[,10],type="l",ylab="Global Active Power (kilowatts)",xlab="")
         dev.off()

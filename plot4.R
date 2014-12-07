@@ -11,6 +11,7 @@ plot4 <- function(...){
         table02$FullDate<-time01
         
         ##Generate Plot 4
+        Sys.setlocale("LC_TIME","C")
         png(filename="plot4.png",width=480,height=480)
         par(mfcol=c(2,2))
         plot(y=table02[,3],x=table02[,10],type="l",ylab="Global Active Power",xlab="")

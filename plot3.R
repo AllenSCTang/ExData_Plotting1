@@ -11,6 +11,7 @@ plot3 <- function(...){
         table02$FullDate<-time01
         
         ##Generate Plot 3
+        Sys.setlocale("LC_TIME","C")
         png(filename="plot3.png",width=480,height=480)
         plot(y=table02[,7],x=table02[,10],type="l",ylab="Energy sub metering",xlab="")
         points(y=table02[,8],x=table02[,10],type="l",col="red")
